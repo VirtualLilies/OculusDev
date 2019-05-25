@@ -2,5 +2,26 @@
 	"FileVersion": 3,
 	"EngineAssociation": "{DB36BEF3-4634-172C-C18F-BFA8B1328BCF}",
 	"Category": "",
-	"Description": ""
+	"Description": "",
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystemOculus",
+			"Enabled": true
+		},
+		{
+			"Name": "OculusAvatar",
+			"Enabled": true
+		},
+		{
+			"Name": "OculusAudio",
+			"Enabled": true
+		},
+		{
+			"Name": "SteamVR",
+			"Enabled": false
+		}
+	],
+	"TargetPlatforms": [
+		"Android"
+	]
 }
