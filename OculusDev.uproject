@@ -3,6 +3,13 @@
 	"EngineAssociation": "{DB36BEF3-4634-172C-C18F-BFA8B1328BCF}",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "OculusDev",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "OnlineSubsystemOculus",
@@ -19,7 +26,8 @@
 		{
 			"Name": "SteamVR",
 			"Enabled": false
-		}
+		},
+
 	],
 	"TargetPlatforms": [
 		"Android",
