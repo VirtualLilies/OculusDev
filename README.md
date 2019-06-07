@@ -1,4 +1,4 @@
-# UE4 Oculus Quest template project based on [UE4 Oculus 4.22 branch](https://github.com/Oculus-VR/UnrealEngine)
+# UE4 Oculus Template Plugin Development project based on [Oculus-4.22 branch](https://github.com/Oculus-VR/UnrealEngine) *(although plugin can be compiled with binary 4.22)*
 
 Main features: *(state @05.06.2019)*
 
