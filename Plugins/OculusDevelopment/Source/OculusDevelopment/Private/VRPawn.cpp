@@ -48,3 +48,8 @@ void AVRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void AVRPawn::SetupPawn()
+{
+
+}
+
