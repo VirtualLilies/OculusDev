@@ -4,7 +4,8 @@ using UnrealBuildTool;
 
 public class OculusDevelopment : ModuleRules
 {
-	public OculusDevelopment(ReadOnlyTargetRules Target) : base(Target)
+
+    public OculusDevelopment(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
@@ -24,23 +25,50 @@ public class OculusDevelopment : ModuleRules
 		
 		PublicDependencyModuleNames.AddRange(
 			new string[]
-			{
-				"Core",
-				// ... add other public dependencies that you statically link with here ...
-			}
-			);
-			
-		
-		PrivateDependencyModuleNames.AddRange(
+        {
+                "Core",
+                "CoreUObject",
+                "Engine",
+                //"InputCore",
+                "PhysX",
+                //"FLEX", remove comment if building in the NVIDIA flex branch - NOTE when put in place FLEX only listed win32 and win64 at compatible platforms
+                "HeadMountedDisplay",
+                //"RHI",
+                //"RenderCore",
+                //"ShaderCore",
+                //"NetworkReplayStreaming",
+                //"AIModule",
+                "UMG",
+                "NavigationSystem",
+                "AIModule",
+                //"Renderer",
+                //"UtilityShaders"
+        }
+        );
+
+
+        PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"CoreUObject",
-				"Engine",
-				"Slate",
-				"SlateCore",
-				// ... add private dependencies that you statically link with here ...	
+                //"Core",
+                //"CoreUObject",
+                //"Engine",
+                "InputCore",
+                //"PhysX",
+                //"FLEX", remove comment if building in the NVIDIA flex branch - NOTE when put in place FLEX only listed win32 and win64 at compatible platforms
+                //"HeadMountedDisplay",
+                "RHI",
+                "RenderCore",
+                //"ShaderCore",
+                "NetworkReplayStreaming",
+                "AIModule",
+                "UMG",
+                "GameplayTags",
+                "PhysXVehicles"
+                //"Renderer",
+                //"UtilityShaders"	
 			}
-			);
+            );
 		
 		
 		DynamicallyLoadedModuleNames.AddRange(
