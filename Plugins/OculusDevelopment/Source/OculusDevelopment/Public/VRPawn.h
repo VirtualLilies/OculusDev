@@ -47,4 +47,5 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void SetupPawn();
 
+
 };

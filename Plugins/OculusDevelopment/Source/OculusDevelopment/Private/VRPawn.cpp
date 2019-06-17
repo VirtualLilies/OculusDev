@@ -6,6 +6,7 @@
 #include "Components/InputComponent.h"
 #include "MotionControllerComponent.h"
 #include "Components/SceneComponent.h"
+#include "ConstructorHelpers.h"
 
 // Sets default values
 AVRPawn::AVRPawn()
@@ -31,7 +32,7 @@ AVRPawn::AVRPawn()
 void AVRPawn::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	SetupPawn();
 }
 
 // Called every frame
@@ -50,6 +51,7 @@ void AVRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void AVRPawn::SetupPawn()
 {
+	
 
 }
 
