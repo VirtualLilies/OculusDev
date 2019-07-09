@@ -29,6 +29,7 @@ public class OculusDevelopment : ModuleRules
                 "Core",
                 "CoreUObject",
                 "Engine",
+                "OculusHMD",
                 //"InputCore",
                 "PhysX",
                 //"FLEX", remove comment if building in the NVIDIA flex branch - NOTE when put in place FLEX only listed win32 and win64 at compatible platforms

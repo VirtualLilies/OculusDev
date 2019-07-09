@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "{DB36BEF3-4634-172C-C18F-BFA8B1328BCF}",
+	"EngineAssociation": "4.22",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -26,8 +26,7 @@
 		{
 			"Name": "SteamVR",
 			"Enabled": false
-		},
-
+		}
 	],
 	"TargetPlatforms": [
 		"Android",

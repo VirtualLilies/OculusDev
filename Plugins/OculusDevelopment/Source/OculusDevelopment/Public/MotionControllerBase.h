@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Hand.h"
+
 #include "MotionControllerBase.generated.h"
 
 UCLASS()
