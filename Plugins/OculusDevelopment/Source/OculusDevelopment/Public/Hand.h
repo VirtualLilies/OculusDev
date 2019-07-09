@@ -49,6 +49,10 @@ public:
 	// Sets default values for this actor's properties
 	AHand();
 
+	void ActivateHand();
+
+	void DeactivateHand();
+
 	// Hand anim finger variables
 	float ThumbFingerAxis;
 	float IndexFingerAxis;

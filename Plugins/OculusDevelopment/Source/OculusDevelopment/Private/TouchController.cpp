@@ -9,8 +9,6 @@
 // Sets default values
 ATouchController::ATouchController()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
 
 	bool bInputFocus = false;
 	float ThumbstickX = 0.0f;
@@ -23,7 +21,20 @@ ATouchController::ATouchController()
 
 void ATouchController::Tick(float DeltaTime)
 {
+	
+	if (bInputFocus != UOculusFunctionLibrary::HasInputFocus())
+	{
+		bInputFocus = UOculusFunctionLibrary::HasInputFocus();
+		if (bInputFocus)
+		{
+			Hand->ActivateHand();
+		}
+		else
+		
+		SetActorHiddenInGame(true);
+		Hand->DeactivateHand();
 
+	}
 }
 
 void ATouchController::UpdateAnimationValues()

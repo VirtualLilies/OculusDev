@@ -46,6 +46,14 @@ AHand::AHand()
 
 }
 
+void AHand::ActivateHand()
+{
+}
+
+void AHand::DeactivateHand()
+{
+}
+
 // Called when the game starts or when spawned
 void AHand::BeginPlay()
 {

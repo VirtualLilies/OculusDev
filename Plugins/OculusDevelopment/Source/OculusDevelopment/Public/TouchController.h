@@ -18,13 +18,6 @@ class OCULUSDEVELOPMENT_API ATouchController : public AMotionControllerBase
 	// Sets default values for this actor's properties
 	ATouchController();
 
-	// Variables for input/animation management
-	bool bInputFocus;
-	float ThumbstickX;
-	float ThumbstickY;
-	float TriggerAxis;
-	float GripAxis;
-
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void UpdateAnimationValues();
 
@@ -37,5 +30,12 @@ class OCULUSDEVELOPMENT_API ATouchController : public AMotionControllerBase
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	// Variables for input/animation management
+	bool bInputFocus;
+	float ThumbstickX;
+	float ThumbstickY;
+	float TriggerAxis;
+	float GripAxis;
 
 };
