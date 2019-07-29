@@ -26,6 +26,8 @@ AVRPawn::AVRPawn()
 	RightMotionController = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("RightMotionController"));
 	RightMotionController->SetupAttachment(RootComponent);
 	RightMotionController->SetTrackingSource(EControllerHand::Right);
+
+	bCanMove = true;
 }
 
 // Called when the game starts or when spawned

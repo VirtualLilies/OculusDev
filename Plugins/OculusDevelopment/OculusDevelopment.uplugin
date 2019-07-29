@@ -13,21 +13,19 @@
 	"CanContainContent": true,
 	"IsBetaVersion": true,
 	"Installed": false,
-	"Modules": [
-		{
-			"Name": "OculusDevelopment",
-			"Type": "Runtime",
-			"LoadingPhase": "Default",
-						"WhitelistPlatforms" :
-             [
-                 "Win32",
-                 "Win64",
-				 "Android"
-             ],
-			 "BlacklistPlatforms" :
-             [
-                 "iOS"
-             ]
-		}
-	]
+  "Modules": [
+    {
+      "Name": "OculusDevelopment",
+      "Type": "Runtime",
+      "LoadingPhase": "Default",
+      "WhitelistPlatforms": [
+        "Win32",
+        "Win64",
+        "Android"
+      ],
+      "BlacklistPlatforms": [
+        "iOS"
+      ]
+    }
+  ]
 }

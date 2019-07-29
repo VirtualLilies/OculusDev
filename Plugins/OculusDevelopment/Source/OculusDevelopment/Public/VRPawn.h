@@ -47,5 +47,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void SetupPawn();
 
+	bool bCanMove;
 
 };

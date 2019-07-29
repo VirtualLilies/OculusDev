@@ -18,13 +18,10 @@ class OCULUSDEVELOPMENT_API ATouchController : public AMotionControllerBase
 	// Sets default values for this actor's properties
 	ATouchController();
 
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-	void UpdateAnimationValues();
+	UFUNCTION(BlueprintCallable, Category = "Updates")
+	void UpdateAnimationValues(float ThumbstickX, float ThumbstickY, float TriggerAxis, float GripAxis);
 
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-	void UpdateHandAnimations();
-
-	UFUNCTION(BlueprintCallable, Category = "Setup")
+	UFUNCTION(BlueprintCallable, Category = "Updates")
 	void UpdateTeleportRotation();
 		
 public:

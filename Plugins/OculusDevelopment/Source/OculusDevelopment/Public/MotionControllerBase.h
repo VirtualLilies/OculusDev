@@ -13,16 +13,15 @@ class OCULUSDEVELOPMENT_API AMotionControllerBase : public AActor
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Setup", meta = (AllowPrivateAccess = "true"))
-	EControllerHand ControllerHandEnum;
-
-	
 public:	
 	// Sets default values for this actor's properties
 	AMotionControllerBase();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Setup", meta = (AllowPrivateAccess = "true"))
 	AHand* Hand;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Setup", meta = (AllowPrivateAccess = "true"))
+		EControllerHand ControllerHandEnum;
 
 protected:
 	// Called when the game starts or when spawned

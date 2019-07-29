@@ -7,6 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SplineMeshComponent.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
+#include "VRPawn.h"
 
 // Sets default values
 AHand::AHand()
@@ -43,6 +44,10 @@ AHand::AHand()
 	MiddleFingerAxis = 0.8f;
 	RingFingerAxis = 0.8f;
 	PinkyFingerAxis = 0.8f;
+	
+	MyPawn = nullptr;
+
+	Yaw = 0.0f;
 
 }
 
@@ -52,6 +57,82 @@ void AHand::ActivateHand()
 
 void AHand::DeactivateHand()
 {
+}
+
+void AHand::AddTeleportRotation(float InYaw)
+{
+	Yaw = InYaw;
+}
+
+
+
+
+bool AHand::IsTeleportActive()
+{
+	return bTeleportActive;
+}
+
+void AHand::ActivateTeleport()
+{
+	if (MyPawn->bCanMove)
+	{
+		bTeleportActive = true;
+	}
+}
+
+void AHand::DeactivateTeleport()
+{
+	bTeleportActive = false;
+
+	if (TeleportMarker->IsVisible())
+	{
+		MyPawn->SetActorLocation(TeleportMarker->GetComponentLocation(), false);
+		MyPawn->AddActorWorldRotation(FRotator(0.0f, 0.0f, Yaw));
+
+		TeleportMarker->SetVisibility(false, false);
+		TeleportSplineMesh->SetVisibility(false, false);
+	}
+	else
+	{
+		TeleportMarker->SetVisibility(false, false);
+		TeleportSplineMesh->SetVisibility(false, false);
+	}
+	
+}
+
+void AHand::ThumbAction()
+{
+
+}
+
+void AHand::ThumbActionEnd()
+{
+
+}
+
+void AHand::IndexAction()
+{
+}
+
+void AHand::IndexActionEnd()
+{
+}
+
+void AHand::FireFingerActions()
+{
+}
+
+void AHand::StopFingerActions()
+{
+}
+
+void AHand::UpdateHandAnimation(float Thumb, float Index, float Middle, float Ring, float Pinky)
+{
+	Thumb = ThumbFingerAxis;
+	Index = IndexFingerAxis;
+	Middle = MiddleFingerAxis;
+	Ring = RingFingerAxis;
+	Pinky = PinkyFingerAxis;
 }
 
 // Called when the game starts or when spawned

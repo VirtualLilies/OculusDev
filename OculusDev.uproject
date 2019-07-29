@@ -10,24 +10,28 @@
 			"LoadingPhase": "Default"
 		}
 	],
-	"Plugins": [
-		{
-			"Name": "OnlineSubsystemOculus",
-			"Enabled": true
-		},
-		{
-			"Name": "OculusAvatar",
-			"Enabled": true
-		},
-		{
-			"Name": "OculusAudio",
-			"Enabled": true
-		},
-		{
-			"Name": "SteamVR",
-			"Enabled": false
-		}
-	],
+  "Plugins": [
+    {
+      "Name": "OnlineSubsystemOculus",
+      "Enabled": true
+    },
+    {
+      "Name": "OculusAvatar",
+      "Enabled": true
+    },
+    {
+      "Name": "OculusAudio",
+      "Enabled": true
+    },
+    {
+      "Name": "SteamVR",
+      "Enabled": false
+    },
+    {
+      "Name": "OculusVR",
+      "Enabled": true
+    }
+  ],
 	"TargetPlatforms": [
 		"Android",
 		"WindowsNoEditor"

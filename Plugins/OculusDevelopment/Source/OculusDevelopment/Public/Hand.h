@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "VRPawn.h"
 #include "Hand.generated.h"
 
 UCLASS(config=Game, Blueprintable)
@@ -49,17 +50,46 @@ public:
 	// Sets default values for this actor's properties
 	AHand();
 
+	//Save pawn reference
+	AVRPawn* MyPawn;
+
+	// Teleport functions and variables
+	float Yaw;
+
 	void ActivateHand();
 
 	void DeactivateHand();
 
-	// Hand anim finger variables
+	void AddTeleportRotation(float InYaw);
+
+	bool bTeleportActive;
+
+	// Exposed helper function for further use cases
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Teleport")
+	bool IsTeleportActive();
+
+	void ActivateTeleport();
+	void DeactivateTeleport();
+
+	/*Hand stuff*/
+
+	// Hand actions functions
+
+	void ThumbAction();
+	void ThumbActionEnd();
+	void IndexAction();
+	void IndexActionEnd();
+	void FireFingerActions();
+	void StopFingerActions();
+
+	// Hand animation fingers variables
 	float ThumbFingerAxis;
 	float IndexFingerAxis;
 	float MiddleFingerAxis;
 	float RingFingerAxis;
 	float PinkyFingerAxis;
 
-	
+	UFUNCTION(BlueprintCallable, Category = "Updates", meta = (AllowPrivateAccess = "true"))
+	void UpdateHandAnimation(float Thumb, float Index, float Middle, float Ring, float Pinky);
 
 };
